@@ -38,3 +38,39 @@
 #searchbar-nav .navbar-nav{
   justify-content: end;
 }
+
+/* Carousel  */
+
+#carousel-home {
+  width: 100%;
+}
+
+#carousel-home .carousel-inner {
+  height: 60vh;
+}
+
+#carousel-home .carousel-item {
+  height: 60vh;
+}
+
+#carousel-home .carousel-caption {
+  bottom: 30%;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+#carousel-home p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#carousel-home .btn-dark {
+  font-size: 14px;
+  padding: 20px 45px 20px 45px;
+  background-color: white;
+  border-radius: 0%;
+  border: none;
+  color: black;
+  text-transform: uppercase;
+}
