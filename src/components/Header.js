@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -21,7 +22,9 @@ function Header() {
                 />
                 {/* <Button>Search</Button> */}
             </Form>
-                <Navbar.Brand href="/" ><div>THE GROOMING CLINIC</div></Navbar.Brand>
+                <Link to="/" className="navbar-brand">
+                   <div>THE GROOMING CLINIC</div>
+                </Link>
                 <Nav>
                     <Nav.Link href="#"><i className="fas fa-envelope"></i></Nav.Link>
                     <Nav.Link href="#"><i className="fas fa-user"></i></Nav.Link>
@@ -32,9 +35,9 @@ function Header() {
          <Navbar bg="light" id="menu-nav">
             <Container>
                 <Nav>
-                    <Nav.Link href="#">Brands</Nav.Link>
-                    <Nav.Link href="#">Skincare</Nav.Link>
-                    <Nav.Link href="#">Fragrance</Nav.Link>
+                    <Link to="/brands" className="nav-link">Brands</Link>
+                    <Link to="/fragrance" className="nav-link">Fragrance</Link>
+                    <Link to="/skincare" className="nav-link">Skincare</Link>
                 </Nav>
             </Container>
         </Navbar>

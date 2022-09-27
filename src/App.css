@@ -27,6 +27,11 @@
   color: black;
 }
 
+#menu-nav a {
+  text-decoration: none;
+  padding: 0 10px;
+}
+
 #searchbar-nav div div, form {
   min-width: 30%;
 }
