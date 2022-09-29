@@ -27,7 +27,7 @@ function Header() {
             />
         )
     }
-    
+
     return (
         <>
             <Navbar id="alert-banner">
@@ -40,7 +40,7 @@ function Header() {
                     <Form className="d-flex">
                         <i className="fas fa-search"></i>
                         <Form.Control
-                            type="search"
+                            type="text"
                             className="me-2"
                             aria-label="Search"
                             size="sm"

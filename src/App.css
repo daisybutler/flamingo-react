@@ -20,6 +20,11 @@
   background: transparent;
   border: none;
   z-index: 5;
+  border-radius: 0;
+}
+
+#searchbar-nav input:hover {
+  border-bottom: 1px solid rgb(153, 153, 153);
 }
 
 #searchbar-nav form {
