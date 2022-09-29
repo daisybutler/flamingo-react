@@ -51,6 +51,7 @@
 
 #menu-nav {
   height: 50px;
+  border-bottom: 1px solid rgb(153, 153, 153);
 }
 
 #menu-nav div {
