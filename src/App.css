@@ -16,6 +16,34 @@
   border-bottom: 1px solid rgb(153, 153, 153);
 }
 
+#searchbar-nav input {
+  background: transparent;
+  border: none;
+  z-index: 5;
+}
+
+#searchbar-nav form {
+  position: relative;
+}
+
+#searchbar-nav .fa-search {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+#searchbar-nav input:focus {
+  box-shadow: none;
+}
+
+.Typewriter {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 14px;
+}
+
 #menu-nav {
   height: 50px;
 }
@@ -32,7 +60,8 @@
   padding: 0 10px;
 }
 
-#searchbar-nav div div, form {
+#searchbar-nav div div,
+form {
   min-width: 30%;
 }
 
@@ -40,7 +69,7 @@
   margin: 0 auto;
 }
 
-#searchbar-nav .navbar-nav{
+#searchbar-nav .navbar-nav {
   justify-content: end;
 }
 
