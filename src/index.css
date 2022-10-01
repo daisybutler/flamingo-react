@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', 'Oxygen', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  color: var(--text-black);
   text-transform: uppercase;
 }
 
@@ -27,7 +27,7 @@ p a {
 }
 
 i {
-  color: #212529;
+  color: var(--text-black);
 }
 
 .btn {
