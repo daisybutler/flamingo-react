@@ -86,6 +86,42 @@ form {
   justify-content: end;
 }
 
+#searchbar-nav .navbar-toggler {
+  border: transparent;
+}
+
+#searchbar-nav .navbar-toggler:focus {
+  border: transparent;
+  box-shadow: none;
+}
+
+
+#userControls {
+  height: 300px;
+  text-align: center;
+}
+
+#userControls p {
+  font-size: 14px;
+}
+
+#userControls .btn {
+  font-size: 14px;
+  background-image: linear-gradient(178deg,rgb(40, 40, 40),rgb(40, 40, 40) 10%,rgba(0,0,0,.07) 10%,rgba(0,0,0,.07) 100%),linear-gradient(rgb(40, 40, 40),rgb(40, 40, 40));
+  background-size: 100% 200%,100% 100%;
+  background-position: 100% -100%,100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  transition: background-position .3s cubic-bezier(.215,.61,.355,1);
+  transform: translateZ(0);
+  color: white;
+  padding: 20px 45px 20px 45px;
+}
+
+#userControls .btn:hover {
+  background-position: 100% 25%,100% 100%;
+}
+
 /* Carousel  */
 
 #carousel-home {
