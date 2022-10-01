@@ -13,6 +13,11 @@ function Header() {
         if(!e.target.value) document.querySelector(".Typewriter").style.display = "block";
     }
 
+    const handleClick = (e) => {
+        const url = "https://www.tripadvisor.co.uk";
+        if (e.type === "click") window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
     const TypewriterSearch = () => {
         return (
             <Typewriter id="typewriterSearch" 
@@ -29,7 +34,7 @@ function Header() {
 
     return (
         <>
-            <Navbar id="alert-banner">
+            <Navbar id="alert-banner" onClick={handleClick}>
                 <Container className="d-flex justify-content-center vertical-align-middle">
                     <p>See our 72 5-star reviews on Trustpilot</p>
                 </Container>

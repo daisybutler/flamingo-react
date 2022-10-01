@@ -13,7 +13,7 @@ const CarouselMain = () => {
         <Carousel.Caption>
           <h1>What Matters</h1>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <Button variant="dark">Shop now</Button>
+          <Button variant="dark" href="/skincare" >Shop now</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -25,7 +25,7 @@ const CarouselMain = () => {
         <Carousel.Caption>
           <h1>What Matters</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Button variant="dark">Shop now</Button>
+          <Button variant="dark" href="/brands" >Shop now</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,7 +39,7 @@ const CarouselMain = () => {
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
-          <Button variant="dark">Shop now</Button>
+          <Button variant="dark" href="/fragrance" >Shop now</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
