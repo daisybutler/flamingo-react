@@ -5,7 +5,11 @@
   --subtle-nude: rgb(235 235 235);
   --subtle-nude-darker: rgb(234 216 216);
   --text-black: #212529;
+  --opaque-black: #212529a5;
+  --white: #FFFFFF;
 }
+
+/*Styles */
 
 /* Header */
 
@@ -74,7 +78,7 @@
   font-size: 14px;
   justify-content: center;
   text-transform: uppercase;
-  color: black;
+  color: var(--text-black);
 }
 
 #menu-nav a {
@@ -122,7 +126,7 @@ form {
   border-radius: 0;
   transition: background-position .3s cubic-bezier(.215,.61,.355,1);
   transform: translateZ(0);
-  color: white;
+  color: var(--white);
   padding: 20px 45px 20px 45px;
 }
 
@@ -191,4 +195,30 @@ form {
   color: black;
   text-transform: uppercase;
   margin: 0 50px;
+}
+
+/* Home Image Cards */
+
+#image-cards-home {
+  padding: 50px;
+  text-align: center;
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  border-radius: 0;
+  color: var(--white);
+  margin: 0 50px;
+  border: none;
+  border: 0;
+}
+
+.card-img-overlay {
+  background-color: var(--opaque-black);
+  border: none;
+  border-radius: 0;
+  display: grid;
+  align-content: center;
+  cursor: pointer;
 }
