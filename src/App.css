@@ -92,8 +92,26 @@ form {
   width: 100%;
 }
 
+#carousel-home .carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+}
+
 #carousel-home .carousel-inner {
   height: 60vh;
+  position: relative;
+}
+
+.carousel-caption h1 {
+  padding-bottom: 20px;
+}
+
+#carousel-home p {
+  padding-bottom: 20px;
 }
 
 #carousel-home .carousel-item {
@@ -115,9 +133,10 @@ form {
 #carousel-home .btn-dark {
   font-size: 14px;
   padding: 20px 45px 20px 45px;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 0%;
   border: none;
   color: black;
   text-transform: uppercase;
+  margin: 0 50px;
 }
