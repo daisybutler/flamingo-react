@@ -2,7 +2,6 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function Header() {
