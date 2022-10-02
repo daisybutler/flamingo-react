@@ -42,7 +42,7 @@ function Header() {
             </Navbar>
             <Navbar bg="light" id="searchbar-nav" key={false} expand={false}>
                 <Container className="justify-content-center gap-5">
-                    <Form className="d-flex">
+                    <Form className="d-none d-md-flex">
                         <i className="fas fa-search"></i>
                         <Form.Control
                             type="text"
