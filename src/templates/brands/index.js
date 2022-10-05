@@ -1,31 +1,36 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 const Brands = () => {
 
-    // Dummy data
-    fetch('https://dummyjson.com/products')
-        .then(res => res.json());
+    const [brands, setBrands] = useState([])
 
-    const BrandDirSection = () => {
-
-        const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-
-        const rows = [];
-        console.log(rows)
-        for (let i = 0; i < alphabet.length; i++) {
-            rows.push(`<div key={${alphabet[i]}_entries} />`); 
-        }
-
-        return (
-            <div className="dirSection">{rows}</div>
-        )
+    const fetchData = () => {
+        fetch("https://dummyjson.com/products")
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                setBrands(data.products)
+            })
     }
 
-    
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+    console.log(brands)
+
     return (
         <>
             <h1>Brand Directory</h1>
-            <BrandDirSection />
+            <div>
+            <ul>
+            {brands.map((brand, index) =>
+                    <li key={index}>{brand.brand}</li>    
+                )}
+            </ul>
+            </div>
         </>
     )
 }
