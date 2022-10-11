@@ -1,9 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
 
 const Brands = () => {
 
     const [brands, setBrands] = useState([])
+    const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "O", "P", "Q", "R", "S"];
 
     const fetchData = () => {
         fetch("https://dummyjson.com/products")
@@ -19,17 +21,18 @@ const Brands = () => {
         fetchData();
     }, [])
 
-    console.log(brands)
-
     return (
         <>
             <h1>Brand Directory</h1>
-            <div>
-            <ul>
+            <div id="letter-buttons" className="container">
+            {alphabet.map((letter, index) =>
+                <Button href="#" className="letter-button" key={index}>{letter}</Button>    
+            )}
+            </div>
+            <div id="brands-section" className="container">
             {brands.map((brand, index) =>
-                    <li key={index}>{brand.brand}</li>    
-                )}
-            </ul>
+                    <div className="brand-item" key={index}><a href="#">{brand.brand}</a></div>    
+            )}
             </div>
         </>
     )
