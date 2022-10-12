@@ -1,10 +1,9 @@
 import Card from 'react-bootstrap/Card';
 
-function ImageCard(src) {
-  console.log(src)
+function ImageCard(props) {
   return (
     <Card className="bg-dark text-white">
-      <Card.Img src={src.src} alt="Card image" />
+      <Card.Img src={props.src} alt={props.alt} />
       <Card.ImgOverlay>
         <Card.Title>Item Title</Card.Title>
         <Card.Link className='underlined-link'>Shop Now</Card.Link>
