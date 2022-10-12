@@ -35,6 +35,9 @@
   height: 80px;
   border-bottom: var(--grey-border);
   flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 30;
 }
 
 #searchbar-nav input {
@@ -73,6 +76,9 @@
 #menu-nav {
   height: 50px;
   border-bottom: var(--grey-border);
+  position: sticky;
+  top: 80px;
+  z-index: 30;
 }
 
 #menu-nav div {
@@ -101,7 +107,6 @@ form {
     margin: 0;
   }
 }
-
 
 #searchbar-nav .navbar-nav {
   justify-content: end;
@@ -235,6 +240,16 @@ form {
   .card {
     width: initial;
   }
+ }
+
+ /* Full Img Sections */
+
+ .full-img-section {
+    height: 60vh;
+    align-items: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
  }
 
 
