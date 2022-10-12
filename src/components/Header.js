@@ -41,7 +41,7 @@ function Header() {
                 </Container>
             </Navbar>
             <Navbar bg="light" id="searchbar-nav" key={false} expand={false}>
-                <Container className="justify-content-center gap-5">
+                <Container className="md-justify-content-center gap-5">
                     <Form className="d-none d-md-flex">
                         <i className="fas fa-search"></i>
                         <Form.Control
@@ -58,7 +58,8 @@ function Header() {
                         {/* <Button>Search</Button> */}
                     </Form>
                     <Link to="/" className="navbar-brand">
-                        <div>THE GROOMING CLINIC</div>
+                        <div className="d-none d-md-flex">THE GROOMING CLINIC</div>
+                        <div className="d-flex d-md-none">TGC</div>
                     </Link>
                     {/* <Nav>
                         <Nav.Link href="#"><i className="fas fa-envelope"></i></Nav.Link>

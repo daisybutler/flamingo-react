@@ -96,6 +96,13 @@ form {
   margin: 0 auto;
 }
 
+@media (max-width: 576px) {
+  #searchbar-nav .navbar-brand {
+    margin: 0;
+  }
+}
+
+
 #searchbar-nav .navbar-nav {
   justify-content: end;
 }
@@ -223,6 +230,13 @@ form {
   align-content: center;
   cursor: pointer;
 }
+
+@media (max-width: 576px) {
+  .card {
+    width: initial;
+  }
+ }
+
 
 /*  ---------------------------- BRANDS  */
 
