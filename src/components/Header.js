@@ -5,7 +5,6 @@ import Typewriter from 'typewriter-effect';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function Header(props) {
-    console.log(props.props.count)
 
     const handleMouseEnter = (e) => {
         document.querySelector(".Typewriter").style.display = "none";
