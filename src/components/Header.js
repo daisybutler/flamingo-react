@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-function Header() {
+function Header(props) {
+    console.log(props.props.count)
 
     const handleMouseEnter = (e) => {
         document.querySelector(".Typewriter").style.display = "none";
@@ -82,6 +83,7 @@ function Header() {
                         <Offcanvas.Body>
                             <Nav id="userControls" className="justify-content-end flex-grow-1 pe-3">
                                 <p>Your shopping cart is empty.</p>
+                                <p>Quantity: {props.props.count}</p>
                                 <Nav.Link href="/skincare" className="btn">Shop Now</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>

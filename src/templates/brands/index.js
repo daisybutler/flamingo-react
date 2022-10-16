@@ -31,7 +31,7 @@ const Brands = () => {
             </div>
             <div id="brands-section" className="container">
             {brands.map((brand, index) =>
-                    <div className="brand-item" key={index}><a href="#">{brand.brand}</a></div>    
+                    <div className="brand-item" key={index}><a href="/brands">{brand.brand}</a></div>    
             )}
             </div>
         </>

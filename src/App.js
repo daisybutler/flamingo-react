@@ -7,20 +7,44 @@ import Fragrance from './templates/fragrance';
 import Skincare from './templates/skincare';
 import { Route, Routes } from 'react-router-dom';
 
+//Redux
+import { connect } from "react-redux"
+import { increaseCounter, decreaseCounter } from "./redux/counter/counterActions"
 
-function App() {
+function App(props) {
   return (
     <>
-      <Header />
+      <Header props={props} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/brands" element={<Brands />} />
         <Route exact path="/fragrance" element={<Fragrance />} />
         <Route exact path="/skincare" element={<Skincare />} />
       </Routes>
+      <div>
+        <div>Count: {props.count}</div>
+
+        <button onClick={() => props.increaseCounter()}>Increase Count</button>
+
+        <button onClick={() => props.decreaseCounter()}>Decrease Count</button>
+      </div>
 
     </>
   )
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    count: state.counter.count,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    increaseCounter: () => dispatch(increaseCounter()),
+
+    decreaseCounter: () => dispatch(decreaseCounter()),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
