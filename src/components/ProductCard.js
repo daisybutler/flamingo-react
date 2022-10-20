@@ -2,7 +2,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 
-function ProductCard() {
+// Redux
+import { increaseCounter, decreaseCounter } from "./../redux/counter/counterActions"
+
+
+function ProductCard(props) {
 
     const [products, setProducts] = useState([])
 
@@ -38,7 +42,7 @@ function ProductCard() {
             <Card.Body>
                 <Card.Title className='product-title'>{product.title}</Card.Title>
                 <p className='product-price'>{formatPrice(product.price)}</p>
-                <Button bsPrefix='view-details-button' className='view-details-button'>+ Add To Cart</Button>
+                <Button onClick={() => increaseCounter()} bsPrefix='view-details-button' className='view-details-button'>+ Add To Cart</Button>
             </Card.Body>
         </Card>
         )}

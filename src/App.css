@@ -320,3 +320,29 @@ form {
   color: red;
   font-weight: 700;
 }
+
+/*  -------------------- FOOTER  */
+
+#footer-main {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+#footer-main .row {
+  margin: 50px 0;
+}
+
+#footer-main a:disabled {
+  font-weight: bold;
+}
+
+/*  -------------------- SOCIAL BUTTONS  */
+
+#social-buttons .btn {
+ color: var(--text-black);
+}
+
+#social-buttons {
+  border-radius: 0;
+
+}

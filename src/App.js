@@ -6,6 +6,7 @@ import Home from './templates/home';
 import Fragrance from './templates/fragrance';
 import Skincare from './templates/skincare';
 import { Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
 
 //Redux
 import { connect } from "react-redux"
@@ -28,6 +29,7 @@ function App(props) {
 
         <button onClick={() => props.decreaseCounter()}>Decrease Count</button>
       </div>
+      <Footer />
 
     </>
   )
