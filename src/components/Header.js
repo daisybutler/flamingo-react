@@ -66,7 +66,7 @@ function Header(props) {
                         <Nav.Link href="#"><i className="fas fa-user"></i></Nav.Link>
                         <Nav.Link href="#"><i className="fas fa-shopping-basket"></i></Nav.Link>
                     </Nav> */}
-                    <div style={{display: "flex", justifyContent: "end"}}>
+                    <div style={{ display: "flex", justifyContent: "end" }}>
                         <Navbar.Toggle aria-controls={`shopping-cart-expand-false`} children={<i className="fas fa-shopping-basket"></i>} />
                     </div>
                     <Navbar.Offcanvas
@@ -76,14 +76,17 @@ function Header(props) {
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`shopping-cart-expand-false`}>
-                            <i className="fas fa-shopping-basket" style={{paddingRight: "10px"}}></i>Basket
+                                <i className="fas fa-shopping-basket" style={{ paddingRight: "10px" }}></i>Basket
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav id="userControls" className="justify-content-end flex-grow-1 pe-3">
-                                <p>Your shopping cart is empty.</p>
+                                {props.props.count !== 0 ? (
+                                    <p>You have items in your shopping cart!</p>
+                                ) : <p>Your shopping cart is empty.</p>
+                                }
                                 <p>Quantity: {props.props.count}</p>
-                                <Nav.Link href="/skincare" className="btn">Shop Now</Nav.Link>
+                                <Nav.Link href="/skincare" className="btn">{props.props.count ? "Continue Shopping" : "Shop Now"}</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

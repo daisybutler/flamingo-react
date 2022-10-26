@@ -22,13 +22,13 @@ function App(props) {
         <Route exact path="/fragrance" element={<Fragrance />} />
         <Route exact path="/skincare" element={<Skincare />} />
       </Routes>
-      <div>
+      {/* <div>
         <div>Count: {props.count}</div>
 
         <button onClick={() => props.increaseCounter()}>Increase Count</button>
 
         <button onClick={() => props.decreaseCounter()}>Decrease Count</button>
-      </div>
+      </div> */}
       <Footer />
 
     </>

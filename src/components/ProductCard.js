@@ -3,31 +3,41 @@ import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 
 // Redux
-import { increaseCounter, decreaseCounter } from "./../redux/counter/counterActions"
+import { increaseCounter } from "./../redux/counter/counterActions"
+import { useDispatch } from 'react-redux';
 
-
-function ProductCard(props) {
+function ProductCard() {
 
     const [products, setProducts] = useState([])
+    const dispatch = useDispatch();
 
+    // Load product data
     const fetchData = () => {
         fetch("https://dummyjson.com/products")
-            .then(response => {
-                return response.json()
-            })
-            .then(data => {
-                setProducts(data.products)
-            })
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+            setProducts(data.products)
+        })
     }
 
     useEffect(() => {
         fetchData();
     }, [])
 
+
+    // Handle item add
+    const handleAddItem = () => {
+        dispatch(increaseCounter())
+    }
+
+    // Display only skincare products
     const filteredProducts = products.filter(function (obj) {
         return obj.category === "skincare";
     })
 
+    // Format the prices in readable format
     const formatPrice = (price) => {
         let formattedPrice;
         (typeof price === "number") ? formattedPrice = `£${price}.00` : formattedPrice = "Unavailable";
@@ -42,7 +52,7 @@ function ProductCard(props) {
             <Card.Body>
                 <Card.Title className='product-title'>{product.title}</Card.Title>
                 <p className='product-price'>{formatPrice(product.price)}</p>
-                <Button onClick={() => increaseCounter()} bsPrefix='view-details-button' className='view-details-button'>+ Add To Cart</Button>
+                <Button onClick={handleAddItem} bsPrefix='view-details-button' className='view-details-button'>+ Add To Cart</Button>
             </Card.Body>
         </Card>
         )}
