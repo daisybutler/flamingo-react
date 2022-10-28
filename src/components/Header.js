@@ -3,8 +3,12 @@ import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+//import { useSelector } from 'react-redux'
 
 function Header(props) {
+
+   // const toggleCart = useSelector(state => state.toggleCart.toggleCart);
+   // console.log(toggleCart)
 
     const handleMouseEnter = (e) => {
         document.querySelector(".Typewriter").style.display = "none";
